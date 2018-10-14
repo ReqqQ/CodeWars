@@ -1,0 +1,17 @@
+function printerError(s) {
+var IsError=0;
+var test=false;
+for(var i=0;i<s.length;i++)
+{
+if(s[i]>='a' && s[i]<='z' && s.length>=1)
+{
+test=true;
+  if(s[i]>'m')
+IsError++;
+}
+else
+test=false;
+}
+if(test==true)
+return IsError+"/"+s.length;
+}

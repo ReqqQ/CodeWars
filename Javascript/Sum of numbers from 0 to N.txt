@@ -1,0 +1,29 @@
+var SequenceSum = (function() {
+  function SequenceSum() {}
+
+  SequenceSum.showSequence = function(count) {
+   let sum=0,txt="";
+   if(count>0)
+   {
+   for(var i=0;i<=count;i++)
+   {
+   sum+=i;
+   txt+=i;
+   if(i<count)
+   txt+="+";
+   }
+   return txt+" = "+sum;
+   }
+   else if(count==0)
+   {
+   return "0=0";
+   }
+   else
+   {
+   return count+"<"+0;
+   }
+  };
+
+  return SequenceSum;
+
+})();

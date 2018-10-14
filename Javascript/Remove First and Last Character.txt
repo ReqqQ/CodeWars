@@ -1,0 +1,8 @@
+function removeChar(str){
+  var ar=Array.from(str);
+ar.splice(ar.length-1,1);
+ar.splice(0,1);
+ar.toString();
+var txt=ar.join("");
+return txt;
+};

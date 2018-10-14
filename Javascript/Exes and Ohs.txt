@@ -1,0 +1,16 @@
+function XO(str) {
+var sum_x=0,sum_o=0;
+
+    for(var i=0;i<=str.length;i++)
+    {
+    
+    if(str[i]=='x' || str[i] =='X')
+    sum_x++;
+    else if(str[i]=='o'|| str[i]=='O')
+    sum_o++;
+    }
+    if(sum_x==sum_o)
+    return true
+    else
+    return false
+}
