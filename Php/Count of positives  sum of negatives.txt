@@ -1,0 +1,17 @@
+Given an array of integers.
+Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
+If the input array is empty or null, return an empty array.
+
+function countPositivesSumNegatives($input) {
+    $poz;
+$neg;
+ foreach($input as $val)
+  {
+    if($val>0)
+          $poz++;
+    else
+          $neg+=$val;
+  }
+  $arr=array($poz,$neg);
+  return $arr;
+}
