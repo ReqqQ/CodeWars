@@ -1,0 +1,27 @@
+In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+public class ListFilterer
+{
+   public static IEnumerable<int> GetIntegersFromList(List<object> listOfItems)
+   {
+List<int> list=new List<int>();
+  foreach(object x in listOfItems)
+	
+{
+	  if(!(x is string))
+	  {
+		  int n;
+      int.TryParse(x.ToString(),out n);
+      list.Add(n);
+	  }
+
+   }
+	return list;
+   }
+}

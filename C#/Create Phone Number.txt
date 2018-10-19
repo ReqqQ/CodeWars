@@ -1,0 +1,28 @@
+public class Kata
+{
+  public static string CreatePhoneNumber(int[] numbers)
+  {
+    	string s="(";
+	for(int i=0;i<numbers.Length;i++)
+	{
+	if(i<3)
+	{
+	s+=numbers[i].ToString();
+		if(i==2)
+		{
+		s+=") ";	
+		}
+	}
+	
+	if(i>2 && i<numbers.Length)
+	{
+s+=numbers[i].ToString();
+		if(i==5)
+		{
+		s+="-";	
+		}
+	}
+	}
+    return s ;
+  }
+}
