@@ -1,0 +1,30 @@
+Write a function that will find all the anagrams of a word from a list. You will be given two inputs a word and an array with words. You should return an array of all the anagrams or an empty array if there are none. For example:
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+public static class Kata
+{
+  public static List<string> Anagrams(string word, List<string> words)
+  {
+    	char[] arr=word.ToCharArray();
+	Array.Sort(arr);
+	string arr1=new String(arr);
+	char[] arr2=new char[10];
+  List<string> l=new List<string>();
+for (int i = 0; i < words.Count; i++)
+{
+	string str="";
+	string arr3="";
+	Array.Clear(arr2,0,arr2.Length);
+	str=words[i];
+	
+arr2=str.ToCharArray();
+Array.Sort(arr2);
+arr3=new String(arr2);	
+ if (arr3.Equals(arr1) && arr2.Count()==arr3.Count()) 
+            	l.Add(words[i]);
+  }
+  return l;
+}
+}
