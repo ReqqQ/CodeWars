@@ -1,0 +1,43 @@
+Write simple .camelCase method (camel_case function in PHP, CamelCase in C# or camelCase in Java) for strings. All words must have their first letter capitalized without spaces.
+
+For instance:
+
+camelCase("hello case"); // => "HelloCase"
+camelCase("camel case word"); // => "CamelCaseWord"
+Don't forget to rate this kata! Thanks :)
+
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+namespace Kata
+{
+  public static class Problem
+  {
+    public static string CamelCase(this string str)  
+    {  
+      string result="";
+      char[] tab=str.ToCharArray();
+      Console.WriteLine("Dlugosc tab"+tab.Length);
+      Console.WriteLine("Dlugosc stringa"+str.Length);
+for(int i=0;i<tab.Length;i++)
+{
+	char c=' ';
+if(i==0)
+{
+	c=char.ToUpper(tab[i]);
+	tab[i]=c;
+}
+	if(tab[i]==' ' && i<tab.Length-1)
+	{
+		c=char.ToUpper(tab[i+1]);
+		tab[i+1]=c;
+	}
+result+=tab[i];	
+}
+string t=result.Replace(" ",string.Empty);
+		return t ;
+    }
+  }
+}
+
